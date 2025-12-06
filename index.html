@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>لوحة التحكم</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <aside class="sidebar" aria-label="Sidebar">
+    <div class="sidebar-header">
+      <button id="sidebar-toggle" aria-label="Toggle sidebar">☰</button>
+      <a class="brand" href="#/dashboard">ISP Admin</a>
+    </div>
+    <nav class="menu">
+      <a href="#/dashboard" class="menu-item" data-route="dashboard">لوحة التحكم</a>
+      <a href="#/vouchers" class="menu-item" data-route="vouchers">القسائم/الخطط</a>
+      <a href="#/users" class="menu-item" data-route="users">المستخدمون</a>
+      <a href="#/accounts" class="menu-item" data-route="accounts">الحسابات</a>
+      <a href="#/operations" class="menu-item" data-route="operations">عمليات الحساب</a>
+      <a href="#/settings" class="menu-item" data-route="settings">الإعدادات</a>
+      <div class="menu-separator"></div>
+      <a href="#/logout" class="menu-item danger" data-route="logout">تسجيل الخروج</a>
+    </nav>
+  </aside>
+
+  <div class="app">
+    <header class="topbar">
+      <h1 id="page-title">لوحة التحكم</h1>
+      <div class="topbar-actions">
+        <input type="search" id="global-search" placeholder="بحث..." aria-label="بحث عام" />
+        <button id="theme-toggle" aria-label="Toggle theme">الوضع الليلي</button>
+        <select id="lang-select" aria-label="Language">
+          <option value="ar">العربية</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+    </header>
+
+    <main id="view" class="view">
+      <!-- محتوى الصفحات يُحقن هنا عبر JS -->
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
